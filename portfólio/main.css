@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Header principal */
+.header-container {
+    background-color: #242936;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 14px
+}
+
+.logo img {
+    height: 55px;
+}
+
+.menu {
+    place-content: center;
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    padding: 17px 30px;
+}
+
+.menu li a {
+    color: rgb(212, 212, 212);
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.menu a:hover {
+    color: #ffffff;
+    transition: .8s;
+}
+
+/* Content principal [Segurando tudo]*/
+.content-container-1 {
+    background-color: #242936;
+}
+
+.box-principal {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 53px;
+}
+
+/* Bubble */
+.bubble {
+    background-image: linear-gradient(138deg,rgba(43,80,237,.7) 8%,#2b50ed 92%);
+    height: 800px;
+    width: 800px;
+    border-radius: 400px;
+    display: inline-block;
+}
+
+.background-bubble {
+    position: absolute;
+    left: 80%;
+    top: -6em;
+}
+
+.content-container-1 {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Titulo principal */
+@font-face {
+    font-family: 'Ample Soft Pro Medium';
+    src: url('fonts/AmpleSoftProMedium.ttf') format('truetype');
+ }
+
+.titledivul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 165px 70px 165px 0;
+}
+
+.maintitle span {
+    color: white;
+    font-family: 'Ample Soft Pro Medium';
+    font-weight: 500;
+    font-size: 46px
+}
+
+.maindescription {
+    margin-top: 18px;
+}
+
+.maindescription span {
+    color: rgb(162, 175, 189);
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 18px;
+}
+
+/* animated text */
+.animated {
+    left: 20%;
+    top: 39%;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    mix-blend-mode:lighten;
+    background: #2b50ed;
+    animation: animated 5s ease-in-out infinite;
+    transition: 5s;
+}
+
+@keyframes animated {
+    0% {
+        transform: scale(6.1) translateY(-8px);
+        border-radius: 50%;
+    }
+    33% {
+        transform: scale(6.1) translateY(0px);
+        background-color: rgb(4, 205, 255);
+        border-radius: 10%;
+    }
+    66% {
+        transform: scale(6.1) translateX(8px);
+        background-color: rgb(0, 132, 255);
+        border-radius: 50%;
+    }
+    100% {
+        transform: scale(6.1) translateY(-8px);
+        border-radius: 50%;
+    }
+}
+
+.maintitle:hover ~ .animated {
+    position: absolute;
+
+    background: none;
+    background-color: none;
+    opacity: 0;
+    transition: 0s;
+    animation: animated2 2s cubic-bezier(0.44, 0.49, 0.54, 0.56) infinite;
+}
+
+@keyframes animated2 {
+    0% {
+        transform: scale(6.1) translateY(-8px);
+    }
+    33% {
+        transform: scale(6.1) translateY(0px);
+        background-color: rgb(4, 205, 255);
+    }
+    66% {
+        transform: scale(6.1) translateY(8px);
+        background-color: rgb(0, 132, 255);
+    }
+    100% {
+        transform: scale(6.1) translateY(-8px);
+    }
+}
+
+
+/* cursor */
+.cursor {
+    position: sticky;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    mix-blend-mode:lighten;
+}
+
+.maintitle:hover ~ .cursor {
+    background: #2b50ed;
+    transition: 0s;
+    transition-delay: 0s;
+    transform: scale(6.1) translateY(-16px);
+}
+
+/* Botao de contato */
+.contacts {
+    margin-top: 52px;
+    display: inline-flex;
+}
+
+.btn-contact {
+    background-color: rgb(13, 78, 218);
+    box-shadow: 0 14px 30px 0 rgb(43 80 237 / 20%);
+    border-radius: 4px;
+    padding: 12px 40px;
+}
+
+.btn-contact:hover {
+    background-color: rgb(31, 110, 255);
+    transition: .2s;
+}
+
+.btn-contact a {
+    text-decoration: none;
+}
+
+.btnctt {
+    color: white;
+    font-size: 18px;
+    font-family: 'Ample Soft Pro Medium';
+}
+
+/* Redes sociais ao lado do botao contato */
+.social-media {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.social-media a {
+    height: 35px;
+}
+
+.social-media img {
+    height: 21px;
+}
+
+.icon {
+    background-color: rgb(19, 93, 255);
+    border-radius: 8px;
+    padding: 7px;
+    margin: 0 7px;
+}
+
+.icon:hover {
+    background-color: rgb(48, 46, 46);
+    transition: .2s;
+}
+
+/* Illutrator */
+.ad-illustration svg {
+    margin-top: 150px;
+    transform: scale(1.5) translateY(0px);
+    animation: float 10s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: scale(1.5) translateY(-14px);
+    }
+    50% {
+        transform: scale(1.5) translateY(6px);
+    }
+    100% {
+        transform: scale(1.5) translateY(-14px);
+    }
+}
+
+/* Content 2 */
+.content-container-2 {
+    background-color: #212631;
+    height: 800px;
+}
+
