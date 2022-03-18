@@ -108,8 +108,6 @@
 
 /* animated text */
 .animated {
-    left: 20%;
-    top: 39%;
     position: absolute;
     width: 15px;
     height: 15px;
@@ -124,21 +122,21 @@
 
 @keyframes animated {
     0% {
-        transform: scale(6.1) translateY(-8px);
+        transform: scale(6.1) translateY(0px);
         border-radius: 50%;
     }
     33% {
-        transform: scale(6.1) translateY(0px);
+        transform: scale(6.1) translateY(7px);
         background-color: rgb(4, 205, 255);
         border-radius: 10%;
     }
     66% {
-        transform: scale(6.1) translateX(8px);
+        transform: scale(6.1) translateX(6px);
         background-color: rgb(0, 132, 255);
         border-radius: 50%;
     }
     100% {
-        transform: scale(6.1) translateY(-8px);
+        transform: scale(6.1) translateY(0px);
         border-radius: 50%;
     }
 }
@@ -263,9 +261,242 @@
     }
 }
 
+
+
 /* Content 2 */
 .content-container-2 {
-    background-color: #212631;
-    height: 800px;
+    background-color: #242936;
 }
 
+/* Stacks */
+.stacks-container {
+    margin: 0 243px;
+    padding-bottom: 145px;
+}
+
+.stacks-title {
+    color: #808590;
+    font-family: 'Ample Soft Pro Medium';
+    text-align-last: start;
+    font-size: 33px;
+    padding: 60px 0 30px 50px;
+}
+
+.stacks-box li {
+    display: grid;
+    background-color: rgb(42 48 65);
+    padding: 22px 47px;
+    margin: 0 21px;
+    border-radius: 30px;
+}
+
+.stacks-box img {
+    height: 80px;
+    width: 80px;
+}
+
+
+/* Sobre */
+.descme {
+    color: #ffffff;
+    font-family: 'Ample Soft Pro Medium';
+}
+.descme span{
+    color: #0077ff;
+}
+
+.box-about {
+    display: flex;
+    padding: 98px 279px 0 279px;
+}
+
+.about h1 {
+    color: white;
+    font-size: 43px;
+    font-family: 'Ample Soft Pro Medium';
+}
+
+.about h2 {
+    color: #2b50ed;
+    font-size: 43px;
+    font-family: 'Ample Soft Pro Medium';
+    padding-left: 18px;
+}
+
+.about-description {
+    padding: 18px;
+}
+
+.about-text {
+    color: #a6aab5;
+    font-size: 16px;
+    font-family: 'Ample Soft Pro Medium';
+}
+
+/* Perfil */
+.box-perfil {
+    background-color: #2b50ed;
+    border-radius: 188px;
+    height: 300px;
+    width: 300px;
+    border-top-left-radius: 69px;
+}
+
+.box-perfil img {
+    width: 300px;
+    border-end-end-radius: inherit;
+}
+
+
+/* Serviços */
+.titles-box {
+    text-align: center;
+}
+
+.services-title {
+    color: white;
+    font-size: 43px;
+    font-family: 'Ample Soft Pro Medium';
+}
+
+.services-title span {
+    color: #2b50ed;
+    font-size: 43px;
+    font-family: 'Ample Soft Pro Medium';
+    padding-left: 18px;
+}
+
+.services-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.s-item {
+    background-color: #31384b;
+    border-radius: 35px;
+    height: 380px;
+    width: 232px;
+    padding: 45px;
+    margin: 50px;
+}
+
+.s-item img {
+    height: 80px;
+}
+
+.s-item h1 {
+    color: white;
+    font-family: system-ui;
+    font-size: 26px;
+    margin: 17px 0;
+}
+
+.s-item span {
+    color: #a6aab5;
+    font-family: system-ui;
+}
+
+.main {
+    background-color: #2b50ed;
+}
+
+@media (max-width: 1622px) {
+    .box-about {
+        padding: 98px 86px 0 86px;
+    }
+
+    .stacks-container {
+        margin: 0 94px;
+    }
+}
+
+@media (max-width: 1229px) {
+    .maintitle span {
+        font-size: 35px;
+    }
+
+    .ad-illustration svg {
+        height: 232px;
+    }
+}
+
+@media (max-width: 1067px) {
+    .maintitle span {
+        font-size: 50px;
+    }
+
+    .ad-illustration svg {
+        height: 232px;
+        margin-top: -25px;
+        margin-bottom: 123px;
+    }
+}
+
+@media (max-width: 840px) {
+    .about span {
+        font-size: 78%;
+    }
+    .about h1 {
+        font-size: 178%;
+    }
+    .about h2 {
+        font-size: 178%;
+    }
+
+    .box-perfil {
+        height: 241px;
+        width: 246px
+    }
+    .box-perfil img {
+        width: 253px;
+    }
+}
+
+@media (max-width: 700px) {
+    .menu {
+        display: none;
+    }
+
+    .titledivul {
+        padding: 126px 0px 164px 0;
+    }
+
+    .animated {
+        height: 10px;
+        width: 10px;
+    }
+
+    .maintitle span {
+        font-size: 28px;
+    }
+
+    .contacts {
+        display: flex;
+        flex-wrap: wrap;
+        place-content: center;
+    }
+
+    .btn-contact {
+        margin: 43px 0;
+    }
+
+    .box-about {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        padding: 98px 17px 0 17px;
+    }
+}
+
+@media (max-width: 590px) {
+    .btnctt {
+        font-size: 13px;
+    }
+    .ad-illustration svg {
+        height: 149px;
+    }
+    .stacks-container {
+        margin: 0;
+    }
+}

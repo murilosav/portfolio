@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio | Murilo Souza</title>
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" type="text/css" href="./main.css">
+    <link rel="stylesheet" type="text/css" href="./Glider.js-master/glider.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -19,8 +20,8 @@
             </div>
             <ul class="menu">
                 <li><a href="#">Início</a></li>
-                <li><a href="#">Portfólio</a></li>
                 <li><a href="#">Serviços</a></li>
+                <li><a href="#">Projetos</a></li>
                 <li><a href="#">Sobre</a></li>
                 <li><a href="#">Contato</a></li>
             </ul>
@@ -59,12 +60,80 @@
 
             </div>
         </div>
+
         <div class="content-container-2">
-            
+
+            <div class="container-about">
+                <div class="box-about">
+                    <div class="perfil">
+                        <div class="box-perfil">
+                            <img src="./img/person.png" alt="Perfil" draggable="false">
+                        </div>
+                    </div>
+                    <div class="about">
+                        <span class="descme">Sobre mim<span>⌝</span></span>
+                        <h1>Olá! Eu sou o</h1>
+                        <h2>Murilo Souza</h2>
+                        
+                        <div class="about-description">
+                            <span class="about-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</span>
+                            <br></br>
+                            <span class="about-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="stacks-container">
+                <h1 class="stacks-title">Conhecimentos:</h1>
+                <div class="glider-contain">
+                    <button aria-label="Previous" class="glider-prev">«</button>
+                        <div class="stacks-box">
+                            <li><img src="./img/html-5.png" alt="HTML5" draggable="false"></li>
+                            <li><img src="./img/css-3.png" alt="CSS3" draggable="false"></li>
+                            <li><img src="./img/js.png" alt="JavaScript" draggable="false"></li>
+                            <li><img src="./img/vuejs.png" alt="VueJS" draggable="false"></li>
+                            <li><img src="./img/php.png" alt="PHP" draggable="false"></li>
+                            <li><img src="./img/mysql.png" alt="MySQL" draggable="false"></li>
+                            <li><img src="./img/python.png" alt="Python" draggable="false"></li>
+                        </div>
+                    <button aria-label="Next" class="glider-next">»</button>
+                </div>
+            </div>
+
+            <div class="services-container">
+                <div class="titles-box">
+                    <span class="descme">Serviços<span>⌝</span></span>
+                    <h1 class="services-title">Meus<span>Serviços</span></h1>
+                </div>
+                <div class="services-box">
+                    <div class="s-item">
+                        <img src="./img/automacao.png" title="Automação" alt="Bot Development" draggable="false">
+                        <h1>Automação para a Web e Sistemas</h1>
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                    </div>
+                    <div class="s-item main">
+                        <img src="./img/webdevelopment.png" title="Desenvolvimento Web" alt="Web Development" draggable="false">
+                        <h1>Desenvolvimento Web</h1>
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                    </div>
+                    <div class="s-item">
+                        <img src="./img/software.png" title="Desenvolvimento de Software" alt="Software Development" draggable="false">
+                        <h1>Desenvolvimento de Software</h1>
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     </div>
-
     <script src="./js/cursor-in-text.js"></script>
     <script src="./js/parallax.js"></script>
+    <script src="./Glider.js-master/glider.js"></script>
+    <script src="./js/stacks-slider.js"></script>
 </body>
 </html>
+
+<!-- pagina de sobre. pagina de stacks. pagina de projetos-->
