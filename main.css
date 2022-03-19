@@ -89,11 +89,23 @@
     padding: 165px 70px 165px 0;
 }
 
-.maintitle span {
+.maintitle {
+    display: contents;
+}
+
+.title {
     color: white;
     font-family: 'Ample Soft Pro Medium';
     font-weight: 500;
     font-size: 46px
+}
+
+.subtitle {
+    color: white;
+    font-family: 'Ample Soft Pro Medium';
+    font-weight: 500;
+    font-size: 29px;
+    max-width: 80vh;
 }
 
 .maindescription {
@@ -413,18 +425,18 @@
     }
 }
 
-@media (max-width: 1229px) {
-    .maintitle span {
-        font-size: 35px;
+@media (max-width: 1266px) {
+    .title {
+        font-size: 48px;
     }
 
-    .ad-illustration svg {
-        height: 232px;
+    .ad-illustration {
+        display: none;
     }
 }
 
 @media (max-width: 1067px) {
-    .maintitle span {
+    .title {
         font-size: 50px;
     }
 
@@ -467,8 +479,12 @@
         width: 10px;
     }
 
-    .maintitle span {
-        font-size: 28px;
+    .title {
+        font-size: 32px;
+    }
+
+    .subtitle {
+        font-size: 21px;
     }
 
     .contacts {
@@ -502,6 +518,10 @@
 }
 
 @media (max-width: 405px) {
+    .box-principal {
+        padding: 0 37px;
+    }
+
     .s-item {
         margin: 21px 12px;
         height: 324px;
