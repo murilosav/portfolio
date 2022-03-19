@@ -427,9 +427,7 @@
     }
 
     .ad-illustration svg {
-        height: 232px;
-        margin-top: -25px;
-        margin-bottom: 123px;
+        display: none;
     }
 }
 
@@ -504,6 +502,7 @@
 @media (max-width: 405px) {
     .s-item {
         margin: 21px 12px;
+        height: 324px;
     }
     .s-item img {
         height: 70px;
