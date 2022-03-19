@@ -393,6 +393,16 @@
     margin: 50px;
 }
 
+.s-item:hover {
+    background-color: #2b50ed;
+    transition: .1s;
+}
+
+.s-item:hover img {
+    filter: invert(100%) sepia(139%) saturate(0%) hue-rotate(337deg) brightness(177%) contrast(265%);
+    transition: .1;
+}
+
 .s-item img {
     height: 80px;
 }
@@ -409,9 +419,6 @@
     font-family: system-ui;
 }
 
-.main {
-    background-color: #2b50ed;
-}
 
 
 /* Responsivo */ 
@@ -614,17 +621,17 @@
 .contact-box {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     padding: 0 0 55px 0;
 }
 
 .contact-information {
-    margin: 91px 0;
     align-self: center;
 }
 
 .logo-box {
     text-align-last: center;
+    margin: 50px 0;
 }
 
 /* colunm 1 */
