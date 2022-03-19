@@ -500,3 +500,18 @@
         margin: 0;
     }
 }
+
+@media (max-width: 405px) {
+    .s-item {
+        margin: 21px 12px;
+    }
+    .s-item img {
+        height: 70px;
+    }
+    .s-item h1 {
+        font-size: 20px;
+    }
+    .s-item span {
+        font-size: 15px;
+    }
+}
