@@ -582,6 +582,7 @@
 
 .p-item:hover {
     background-color: #2b50ed;
+    transition: .6s;
 }
 
 .p-item img {
@@ -630,8 +631,12 @@
 }
 
 .logo-box {
-    text-align-last: center;
     margin: 50px 0;
+}
+
+.logo-box svg {
+    height: 185px;
+    filter: invert(95%) sepia(0%) saturate(20%) hue-rotate(42deg) brightness(105%) contrast(107%);
 }
 
 /* colunm 1 */
