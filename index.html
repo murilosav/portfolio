@@ -16,10 +16,10 @@
     <div class="header-container">
         <div class="header">
             <div class="logo">
-                <a href="#"><img src="./img/iconpng 150x150.png" alt="logo" draggable="false"></a>
+                <a href="/index.html"><img src="./img/iconpng 150x150.png" alt="logo" draggable="false"></a>
             </div>
             <ul class="menu">
-                <li><a href="#">Início</a></li>
+                <li><a href="/index.html">Início</a></li>
                 <li><a href="#">Sobre</a></li>
                 <li><a href="#">Serviços</a></li>
                 <li><a href="#">Projetos</a></li>
@@ -206,20 +206,23 @@
                             <h1 class="contact-title">Entre em<span>contato</span></h1>
                         </div>
                         <div class="email">
-                            <form method="post" action="mailto:murilode.o.souza@gmail.com">
+                            <form id="form-container" method="post" action="https://formspree.io/f/xvolqlop">
                                 <div class="email-inputs">
                                     <div class="name">
-                                        <input type="name" placeholder="Nome" autocomplete="name" name="Nome">
+                                        <input id="name_form" type="name" placeholder="Nome" autocomplete="name" name="subject" required oninvalid="this.setCustomValidity('Preencha o campo em vazio.')" onchange="try{setCustomValidity('')}catch(e){}">
                                     </div>
                                     <div class="email">
-                                        <input type="email" placeholder="Email" autocomplete="email" name="Email">
+                                        <input id="email_form" type="email" placeholder="Email" autocomplete="email" name="email" required>
                                     </div>
                                     <div class="message">
-                                        <textarea cols="70" rows="8" placeholder="Digite sua mensagem" name="Mensagem"></textarea>
+                                        <textarea id="message_form" cols="70" rows="8" placeholder="Digite sua mensagem" name="message" required oninvalid="this.setCustomValidity('Preencha o campo em vazio.')" onchange="try{setCustomValidity('')}catch(e){}"></textarea>
                                     </div>
                                 </div>
                                 <div class="submit">
-                                    <input type="submit" value="Enviar">
+                                    <input id="submit_form" type="submit" value="Enviar">
+                                </div>
+                                <div id="campo_vazio">
+                                    <span>Campo em branco!</span>
                                 </div>
                             </form>
                         </div>
