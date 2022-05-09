@@ -590,7 +590,7 @@
 
 .project-box {
     display: flex;
-    overflow-x: auto;
+    overflow-x: overlay;
 }
 
 .project-box li {
