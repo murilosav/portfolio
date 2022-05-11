@@ -1,46 +1,43 @@
 $("#about").click(function() {
     $('html,body').animate({
         scrollTop: $(".container-about").offset().top},
-        'slow');
+        'slow')
 });
 
 
 $("#services").click(function() {
     $('html,body').animate({
         scrollTop: $(".services-container").offset().top},
-        'slow');
+        'slow')
 });
 
 
 $("#projects").click(function() {
     $('html,body').animate({
         scrollTop: $(".project-title").offset().top},
-        'slow');
+        'slow')
 });
 
 
 $("#contact").click(function() {
     $('html,body').animate({
         scrollTop: $(".contact-box").offset().top},
-        'slow');
+        'slow')
 });
 
 
 
 
+const btnmobile = document.getElementById('btn-contact-mobile')
 
-if (navigator.userAgent.mobile) {
-    const btnmobile = document.getElementById('btn-contact-mobile')
-    
+if (navigator.userAgentData.mobile) {           
     btnmobile.onclick = function() {
         btnmobile.href="mailto:murilode.o.souza@gmail.com?subject=subject text"
       }
-    
-
 }else{
     $(".btn-contact").click(function() {
         $('html,body').animate({
             scrollTop: $(".contact-box").offset().top},
-            'slow');
+            'slow')
     });
 }
