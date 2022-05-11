@@ -30,7 +30,7 @@ $("#contact").click(function() {
 
 const btnmobile = document.getElementById('btn-contact-mobile')
 
-if (navigator.userAgentData.mobile) {           
+if (navigator.userAgentData.match(navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPhone/i))) {           
     btnmobile.onclick = function() {
         btnmobile.href="mailto:murilode.o.souza@gmail.com?subject=subject text"
       }
