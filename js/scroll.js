@@ -27,8 +27,14 @@ $("#contact").click(function() {
 
 
 
-$(".btn-contact").click(function() {
-    $('html,body').animate({
-        scrollTop: $(".contact-box").offset().top},
-        'slow');
-});
+
+
+if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {           
+    window.scrollTo(200,100) // first value for left offset, second value for top offset
+}else{
+    $(".btn-contact").click(function() {
+        $('html,body').animate({
+            scrollTop: $(".contact-box").offset().top},
+            'slow');
+    });
+}
