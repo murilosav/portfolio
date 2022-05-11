@@ -283,7 +283,7 @@
 /* Stacks */
 .stacks-container {
     margin: 0 243px;
-    padding-bottom: 145px;
+    padding-bottom: 50px;
 }
 
 .stacks-title {
@@ -357,12 +357,19 @@
 .box-perfil img {
     width: 300px;
     border-end-end-radius: inherit;
+    border-top-right-radius: 144px;
+    border-top-left-radius: 189px;
+    border-bottom-left-radius: 133px;
 }
 
 
 /* Serviços */
 .titles-box {
     text-align: center;
+}
+
+.services-container {
+    margin-top: 115px;
 }
 
 .services-title {
@@ -387,7 +394,7 @@
 .s-item {
     background-color: #31384b;
     border-radius: 35px;
-    height: 400px;
+    height: 300px;
     width: 232px;
     padding: 45px;
     margin: 50px 23px;
@@ -395,6 +402,11 @@
 
 .s-item:hover {
     background-color: #2b50ed;
+    transition: .1s;
+}
+
+.s-item:hover span {
+    color: white;
     transition: .1s;
 }
 
@@ -548,7 +560,7 @@
 
     .s-item {
         margin: 21px 12px;
-        height: 324px;
+        height: 300px;;
     }
     .s-item img {
         height: 70px;
@@ -591,10 +603,12 @@
 .project-box {
     display: flex;
     overflow-x: overlay;
+    justify-content: space-between;
 }
 
 .project-box li {
     display: block;
+    margin: 16px 0;
 }
 
 .p-item {
@@ -648,6 +662,10 @@
     }
     .end-container {
         font-size: 13px;
+    }
+    
+    .perfil {
+        margin: 0 0 37px 0;
     }
 }
 
