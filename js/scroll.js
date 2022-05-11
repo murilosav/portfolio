@@ -29,7 +29,7 @@ $("#contact").click(function() {
 
 
 
-if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+if (navigator.userAgent.mobile) {
     const btnmobile = document.getElementById('btn-contact-mobile')
     
     btnmobile.onclick = function() {
