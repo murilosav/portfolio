@@ -29,8 +29,14 @@ $("#contact").click(function() {
 
 
 
-if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {           
-    window.scrollTo(0,1000)
+if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+    const btnmobile = document.getElementById('btn-contact-mobile')
+    
+    btnmobile.onclick = function() {
+        btnmobile.href="mailto:murilode.o.souza@gmail.com?subject=subject text"
+      }
+    
+
 }else{
     $(".btn-contact").click(function() {
         $('html,body').animate({
