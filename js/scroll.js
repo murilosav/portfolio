@@ -27,10 +27,12 @@ $("#contact").click(function() {
 
 
 
+const btnmobile = document.getElementById('btn-contact-mobile')
 
-if (window.screen.width <= 768) {           
-    const btnmobile = document.getElementById('btn-contact-mobile')
-    btnmobile.href="https://twitter.com/savitarx"
+if (window.screen.width <= 768) { 
+    window.onload=()=>{
+        btnmobile.href = "mailto:murilode.o.souza@gmail.com?subject=subject text"
+    }
 }
 if (window.screen.width > 768){
     $(".btn-contact").click(function() {
