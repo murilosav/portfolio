@@ -30,12 +30,13 @@ $("#contact").click(function() {
 
 const btnmobile = document.getElementById('btn-contact-mobile')
 
-if (/Mobi/.test(navigator.userAgent) || /Mobi|Android/i.test(navigator.userAgent)) {           
+if (window.screen.width <= 768) {           
     btnmobile.onclick = function() {
         btnmobile.href="mailto:murilode.o.souza@gmail.com?subject=subject text"
     }   
-    
-}else{
+     
+}
+if (window.screen.width > 768){
     $(".btn-contact").click(function() {
         $('html,body').animate({
             scrollTop: $(".contact-box").offset().top},
