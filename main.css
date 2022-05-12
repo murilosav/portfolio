@@ -227,6 +227,10 @@
     font-family: 'Ample Soft Pro Medium';
 }
 
+#btn-contact-mobile {
+    text-decoration: none;
+}
+
 /* Redes sociais ao lado do botao contato */
 .social-media {
     display: inline-flex;
@@ -525,7 +529,7 @@
         place-content: center;
     }
 
-    .btn-contact {
+    #btn-contact-mobile {
         margin: 43px 0;
     }
 
