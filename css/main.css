@@ -806,10 +806,11 @@ header {
 
 
 
-/* Final */
+/* Creditos */
 .end-container {
     background-color: #2b50ed;
     font-family: 'Ample Soft Pro Medium';
+    font-size:14px
     color: white;
     text-align: center;
     padding: 5px;
