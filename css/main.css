@@ -42,6 +42,9 @@ header {
     font-size: 15px;
 }
 
+.menu a {
+    transition: all .5s;
+}
 .menu a:hover {
     color: #ffffff;
     border-bottom: 1px solid #2B50ED;
@@ -256,11 +259,12 @@ header {
     border-radius: 8px;
     padding: 7px;
     margin: 0 7px;
+    transition: all .2s;
 }
 
 .icon:hover {
     background-color: rgb(48, 46, 46);
-    transition: .2s;
+    transition: all .2s;
 }
 
 /* Illutrator */
@@ -423,6 +427,7 @@ header {
 }
 
 .s-item img {
+    user-select: none;
     height: 80px;
 }
 
@@ -590,7 +595,7 @@ header {
 
 /* Projetos */
 .project-container {
-    padding: 105px 205px;
+    padding: 105px 0;
 }
 
 .titles-box {
@@ -611,10 +616,15 @@ header {
     padding-left: 18px;
 }
 
+.project {
+    display: flex;
+    justify-content: center;
+}
+
 .project-box {
+    max-width: 1300px;
     display: flex;
     overflow-x: overlay;
-    justify-content: space-between;
 }
 
 .project-box li {
@@ -622,21 +632,28 @@ header {
     margin: 16px 0;
 }
 
+.project-box li a {
+    text-decoration: none;
+    display: flex;
+}
+
 .p-item {
     background-color: #31384b;
     border-radius: 20px;
     margin: 20px 20px 30px 20px;
     display: inline-block;
+    transition: all .3s;
 }
 
 .p-item:hover {
     background-color: #0c0f1678;
-    transition: .6s;
+    transition: all .6s;
 }
 
 .p-item img {
     height: 300px;
     width: 280px;
+    object-fit: cover;
     border-radius: 15px 15px 4px 4px;
 }
 
@@ -810,7 +827,7 @@ header {
 .end-container {
     background-color: #2b50ed;
     font-family: 'Ample Soft Pro Medium';
-    font-size:14px
+    font-size:14px;
     color: white;
     text-align: center;
     padding: 5px;
