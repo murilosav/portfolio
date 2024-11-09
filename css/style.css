@@ -48,6 +48,7 @@ body {
         max-height: 310px;
         position: absolute;
         right: calc(82vw - 10px);
+        -webkit-max-height: 310px;
         z-index: -1;
     }
 
@@ -56,6 +57,7 @@ body {
         position: absolute;
         left: 78vw;
         top: 612px;
+        -webkit-max-height: 310px;
         z-index: -1;
     }
 }
