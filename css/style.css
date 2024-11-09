@@ -42,7 +42,12 @@ body {
     border-radius: 10px;
 }
 
-
+@supports (-webkit-touch-callout: none) {
+    .absolute {
+        right: 80%;
+        left: 80%;  
+    }
+}
 
 
 header {
