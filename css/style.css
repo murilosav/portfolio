@@ -46,18 +46,21 @@ body {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     .absolute-left {
         max-height: 310px;
-        position: absolute;
-        right: calc(82vw - 10px);
         -webkit-max-height: 310px;
+        position: absolute;
+        right: 82vw;
+        -webkit-right: 82vw;
         z-index: -1;
     }
 
     .absolute-right {
         max-height: 380px;
+        -webkit-max-height: 380px;
         position: absolute;
         left: 78vw;
+        -webkit-left: 78vw;
         top: 612px;
-        -webkit-max-height: 310px;
+        -webkit-top: 612px;
         z-index: -1;
     }
 }
