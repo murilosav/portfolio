@@ -47,14 +47,14 @@ body {
     .absolute-left {
         max-height: 310px;
         position: absolute;
-        right: 82vw;
+        right: calc(82vw - 10px);
         z-index: -1;
     }
 
     .absolute-right {
         max-height: 380px;
         position: absolute;
-        left: 78vw;
+        left: calc(78vw - 10px);
         top: 612px;
         z-index: -1;
     }
