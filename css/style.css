@@ -102,6 +102,16 @@ main {
     padding: 0 20px;
 }
 
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    .absolute-left, .absolute-right {
+        display: none !important;
+    }
+}
+
+
+
+
 .background-blue-filter-blur {
     position: absolute;
     background-color: rgb(18, 104, 218);
@@ -109,7 +119,7 @@ main {
 }
 .background-purple-filter-blur {
     position: absolute;
-    background-color: rgb(48, 18, 218);
+    background-color: rgb(0 163 239 / 46%);
     filter: blur(140px);
 }
 
