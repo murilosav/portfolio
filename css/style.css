@@ -43,23 +43,6 @@ body {
 }
 
 
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    .absolute-left {
-        max-height: 310px;
-        position: absolute;
-        right: calc(82vw - 10px);
-        z-index: -1;
-    }
-
-    .absolute-right {
-        max-height: 380px;
-        position: absolute;
-        left: calc(78vw - 10px);
-        top: 612px;
-        z-index: -1;
-    }
-}
-
 
 header {
     position: sticky;
