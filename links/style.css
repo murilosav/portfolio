@@ -1266,7 +1266,7 @@ body {
 }
 
 .modal-content button {
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(162deg, #1c2448, #064c7e);
     color: white;
     border: none;
     padding: 12px 30px;
@@ -1280,7 +1280,7 @@ body {
 
 .modal-content button:hover {
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 5px 15px rgba(31, 45, 85, 0.4);
 }
 
 .link-subtitle {
