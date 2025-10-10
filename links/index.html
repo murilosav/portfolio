@@ -60,6 +60,16 @@
                     <div class="link-arrow">→</div>
                 </a>
 
+                <!-- Instruction Modal -->
+                <div id="browser-tip-modal" class="modal" style="display: none;">
+                    <div class="modal-content">
+                        <h3>Como abrir no navegador</h3>
+                        <p>1. Toque nos <strong>3 pontos (⋯)</strong> no canto superior</p>
+                        <p>2. Selecione <strong>"Abrir no navegador"</strong> ou <strong>"Abrir no Chrome/Safari"</strong></p>
+                        <button onclick="closeBrowserTip()">Entendi</button>
+                    </div>
+                </div>
+
                 <!-- <a href="https://s4v.dev" target="_blank" rel="noopener noreferrer" class="link-item" data-platform="website">
                     <div class="link-icon">🌐</div>
                     <div class="link-content">
@@ -74,6 +84,20 @@
         </main>
     </div>
 
-    <script src="app.js"></script>
+    <script>
+        function showBrowserTip(event) {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            const isInAppBrowser = /FBAN|FBAV|Instagram|TikTok|musical_ly/i.test(userAgent);
+            
+            if (isInAppBrowser) {
+                event.preventDefault();
+                document.getElementById('browser-tip-modal').style.display = 'flex';
+            }
+        }
+
+        function closeBrowserTip() {
+            document.getElementById('browser-tip-modal').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
