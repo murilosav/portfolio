@@ -87,7 +87,16 @@
     <script>
         function showBrowserTip(event) {
             const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-            const isInAppBrowser = /FBAN|FBAV|Instagram|TikTok|musical_ly/i.test(userAgent);
+            const isInAppBrowser = 
+            /TikTok/i.test(userAgent) ||
+            /ByteLocale/i.test(userAgent) ||
+            /ByteDance/i.test(userAgent) ||
+            /musical_ly/i.test(userAgent) || 
+            /FBAN|FBAV/i.test(userAgent) || 
+            /Instagram/i.test(userAgent) ||
+            /Line\//i.test(userAgent) ||
+            /Snapchat/i.test(userAgent) ||
+            /Twitter/i.test(userAgent);
             
             if (isInAppBrowser) {
                 event.preventDefault();
