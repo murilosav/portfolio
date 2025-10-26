@@ -180,7 +180,8 @@ main {
 }
 
 
-.ad-illustration svg {
+.ad-illustration img {
+    display: flex;
     width: 450px;
     height: 370px;
     animation: float 10s ease-in-out infinite
