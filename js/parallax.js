@@ -1,6 +1,6 @@
 document.addEventListener("mousemove", parallax)
 function parallax(e) {
-    this.querySelectorAll('.ad-illustration').forEach(illustration => {
+    this.querySelectorAll('.parallax-illustration').forEach(illustration => {
         const speed = illustration.getAttribute('data-speed')
 
         const x = (window.innerWidth - e.pageX*speed)/100

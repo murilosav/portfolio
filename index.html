@@ -3,34 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Murilo Souza | Desenvolvedor Web Full Stack</title>
+    <meta name="description" content="Desenvolvedor Web Full Stack especializado em Django, Python e JavaScript. Criação de e-commerces, plataformas dinâmicas e automação de processos. Entre em contato!">
+    <meta name="keywords" content="desenvolvedor full stack, desenvolvedor django, desenvolvedor python, desenvolvedor javascript, e-commerce, automação, web development, portfólio murilo souza">
+    <meta name="author" content="Murilo de O. Souza">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://s4v.dev/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://s4v.dev/">
+    <meta property="og:title" content="Murilo Souza | Desenvolvedor Web Full Stack">
+    <meta property="og:description" content="Desenvolvedor Web Full Stack especializado em Django, Python e JavaScript. Criação de e-commerces, plataformas dinâmicas e automação de processos.">
+    <meta property="og:image" content="https://s4v.dev/images/preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Murilo Souza - Desenvolvedor Full Stack">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://s4v.dev/">
+    <meta name="twitter:title" content="Murilo Souza | Desenvolvedor Web Full Stack">
+    <meta name="twitter:description" content="Desenvolvedor Web Full Stack especializado em Django, Python e JavaScript. Criação de e-commerces, plataformas dinâmicas e automação de processos.">
+    <meta name="twitter:image" content="https://s4v.dev/images/preview.png">
+    <meta name="twitter:creator" content="@murilos4v">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="./favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="S4VDEV" />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0b0b0b">
+    <meta name="msapplication-TileColor" content="#0b0b0b">
+
+    <!-- DNS Prefetch & Preconnect -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" as="style">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <title>Portfólio | Murilo Souza</title>
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Murilo de O. Souza",
+      "jobTitle": "Desenvolvedor Web Full Stack",
+      "url": "https://s4v.dev",
+      "sameAs": [
+        "https://github.com/murilosav",
+        "https://www.instagram.com/murilos4v",
+        "https://x.com/murilos4v",
+        "https://t.me/murilos4v"
+      ],
+      "email": "murilode.o.souza@gmail.com",
+      "telephone": "+55-42-99868-5557",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "BR"
+      },
+      "knowsAbout": ["Django", "Python", "JavaScript", "Web Development", "E-commerce", "Automação", "Flask", "PostgreSQL", "Docker"],
+      "description": "Desenvolvedor Web Full Stack especializado em Django, Python e JavaScript. Experiência em e-commerces, plataformas dinâmicas, automação de processos e desenvolvimento de soluções web inovadoras."
+    }
+    </script>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="./images/logo-sav.png" alt="Logo" draggable="false">
+        <div class="header-container">
+            <div class="logo">
+                <img src="./images/logo.webp" alt="Logo" draggable="false">
+            </div>
+            <nav>
+                <li id="menu-home">Início</li>
+                <li id="menu-about">Sobre</li>
+                <li id="menu-services">Serviços</li>
+                <li id="menu-projects">Projetos</li>
+                <li id="menu-contact">Contato</li>
+            </nav>
         </div>
-        <nav>
-            <li id="menu-home">Início</li>
-            <li id="menu-about">Sobre</li>
-            <li id="menu-services">Serviços</li>
-            <li id="menu-projects">Projetos</li>
-            <li id="menu-contact">Contato</li>
-        </nav>
     </header>
+
 
     <main>
         <div>
             <div style="justify-items: anchor-center;">
                 <div class="main-details" style="position: relative;">
-                    <img class="absolute-left top-48 w-[320px]" src="./svg/absolute-left-shape.svg" alt="shape">
-                    <img class="absolute-right top-48 w-[520px]" src="./svg/absolute-right-shape.svg" alt="shape">
+                    <img class="absolute-left top-48 w-[320px]" src="./svg/absolute-left-shape.svg" alt="shape" draggable="false">
+                    <img class="absolute-right top-48 w-[520px]" src="./svg/absolute-right-shape.svg" alt="shape" draggable="false">
                     <div class="background-blue-filter-blur first-glow" style="width: 810px; height: 100px; top: 230px;"></div>
                     <div class="main-container">
                         <div class="details">
@@ -42,19 +121,19 @@
                                 <a class="contact-me" href="https://api.whatsapp.com/send?phone=5542998685557">Contate-me</a>
                                 <div class="social-media">
                                     <a href="https://www.instagram.com/murilos4v/" target="_blank">
-                                        <img src="./images/instagram-icon.png" alt="Instagram" draggable="false">
+                                        <img src="./svg/instagram-icon.svg" alt="Instagram" draggable="false">
                                     </a>
                                     <a href="https://x.com/murilos4v" target="_blank">
-                                        <img src="./images/x-icon.png" alt="X/Twitter" draggable="false">
+                                        <img src="./svg/x-icon.svg" alt="X/Twitter" draggable="false">
                                     </a>
                                     <a href="https://github.com/murilosav/" target="_blank">
-                                        <img src="./images/github-icon.png" alt="GitHub" draggable="false">
+                                        <img src="./svg/github-icon.svg" alt="GitHub" draggable="false">
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="ad-illustration" data-speed="0.6" style="transform: translateX(16.182px) translateY(3.086px);">
-                            <img src="./svg/hero-illustration.svg" alt="hero">
+                        <div class="parallax-illustration" data-speed="0.6" style="transform: translateX(16.182px) translateY(3.086px);">
+                            <img src="./svg/hero-illustration.svg" alt="hero" draggable="false">
                         </div>
                     </div>
                 </div>
@@ -66,9 +145,9 @@
                 <div class="background-purple-filter-blur" style="width: 35vw; height: 162px; top: 1398px; left: -2em; opacity: 0.5;"></div>
                 <div class="background-blue-filter-blur" style="width: 20vw !important; height: 20vh; top: 1640px;"></div>
                 <div class="about-me-box">
-                    <div class="profile">
-                        <!-- <img src="./images/photo.png" alt="Perfil" draggable="false"> -->
-                    </div>
+                    <!-- <div class="profile">
+                        <img src="./images/photo.png" alt="Perfil" draggable="false">
+                    </div> -->
                     <div class="description">
                         <span class="description-title">
                             Sobre mim
@@ -95,43 +174,90 @@
                 <div class="stacks-content">
                     <div class="stacks-box">
                         <h2>Stacks:</h2>
-                        <!-- Slider main container -->
                         <div class="stacks-swiper swiper">
                             <div class="swiper-wrapper">
-                                <!-- Slides -->
                                 <div class="swiper-slide">
                                     <div class="stacks">
-                                        <img src="./images/python.png" title="Python" alt="Python" draggable="false">
+                                        <img src="./svg/python.svg" title="Python" alt="Python" draggable="false">
+                                        <h3>Python</h3>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="stacks">
-                                        <img src="./images/django.png" title="Django" alt="Django" draggable="false">
+                                        <img src="./svg/django.svg" title="Django" alt="Django" draggable="false">
+                                        <h3>Django</h3>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="stacks">
-                                        <img src="./images/js.png" title="JavaScript" alt="JavaScript" draggable="false">
+                                        <img src="./svg/flask.svg" title="Flask" alt="Flask" draggable="false">
+                                        <h3>Flask</h3>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="stacks">
-                                        <img src="./images/html-5.png" title="HTML5" alt="HTML5" draggable="false">
+                                        <img src="./svg/javascript.svg" title="JavaScript" alt="JavaScript" draggable="false">
+                                        <h3>JavaScript</h3>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="stacks">
-                                        <img src="./images/css-3.png" title="CSS3" alt="CSS3" draggable="false">
+                                        <img src="./svg/html5.svg" title="HTML5" alt="HTML5" draggable="false">
+                                        <h3>HTML5</h3>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="stacks">
-                                        <img src="./images/postgresql.png" title="PostgreSQL" alt="PostgreSQL" draggable="false">
+                                        <img src="./svg/css3.svg" title="CSS3" alt="CSS3" draggable="false">
+                                        <h3>CSS3</h3>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="stacks">
-                                        <img src="./images/docker.png" title="Docker" alt="Docker" draggable="false">
+                                        <img src="./svg/git.svg" title="Git" alt="Git" draggable="false">
+                                        <h3>Git</h3>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="stacks">
+                                        <img src="./svg/postgresql.svg" title="PostgreSQL" alt="PostgreSQL" draggable="false">
+                                        <h3>PostgreSQL</h3>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="stacks">
+                                        <img src="./svg/redis.svg" title="Redis" alt="Redis" draggable="false">
+                                        <h3>Redis</h3>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="stacks">
+                                        <img src="./svg/docker.svg" title="Docker" alt="Docker" draggable="false">
+                                        <h3>Docker</h3>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="stacks">
+                                        <img src="./svg/celery.svg" title="Celery" alt="Celery" draggable="false">
+                                        <h3>Celery</h3>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="stacks">
+                                        <img src="./svg/openlitespeed.svg" title="OpenLiteSpeed" alt="OpenLiteSpeed" draggable="false">
+                                        <h3>OpenLiteSpeed</h3>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="stacks">
+                                        <img src="./svg/nginx.svg" title="Nginx" alt="Nginx" draggable="false">
+                                        <h3>Nginx</h3>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="stacks">
+                                        <img src="./svg/cloudflare.svg" title="Cloudflare" alt="Cloudflare" draggable="false">
+                                        <h3>Cloudflare</h3>
                                     </div>
                                 </div>
                             </div>
@@ -156,14 +282,12 @@
                                 <span>Serviços</span>
                             </h1>
                         </div>
-                        <div class="services">
-                            <!-- Services Slider container -->
+                        <div class="services swiper-item">
                             <div class="services-swiper swiper">
                                 <div class="swiper-wrapper">
-                                    <!-- Slides -->
                                     <div class="swiper-slide">
                                         <div class="s-item">
-                                            <img src="./images/frontend.png" title="Front-end" alt="Front-end" draggable="false">
+                                            <img src="./svg/frontend.svg" title="Front-end" alt="Frontend" draggable="false">
                                             <h1>Front-end</h1>
                                             <span>
                                                 Criação da interface visual de websites e aplicativos, tornando-os atrativos, otimizados e responsivos.
@@ -172,19 +296,41 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="s-item">
-                                            <img src="./images/backend.png" title="Back-end" alt="Back-end" draggable="false">
+                                            <img src="./svg/backend.svg" title="Back-end" alt="Backend" draggable="false">
                                             <h1>Back-end</h1>
                                             <span>
-                                                Desenvolvimento da lógica e infraestrutura que sustentam sistemas, aplicativos e websites, implementando APIs, bancos de dados e servidores, garantindo a segurança e escalabilidade da aplicação.
+                                                Desenvolvimento da lógica e infraestrutura que sustentam sistemas, aplicativos e websites, implementando APIs, 
+                                                bancos de dados e servidores, garantindo a segurança e escalabilidade da aplicação.
                                             </span>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="s-item">
-                                            <img src="./images/automacao.png" title="Automação" alt="Automação" draggable="false">
-                                            <h1>Automação</h1>
+                                            <img src="./svg/ai.svg" title="AI" alt="AI" draggable="false">
+                                            <h1>Inteligência Artificial</h1>
                                             <span>
-                                                Automatização de processos repetitivos, criando soluções personalizadas para reduzir erros e aumentar a eficiência e produtividade.
+                                                Integração de IA em aplicações com ChatGPT, Claude, Gemini e Grok para desenvolver soluções inovadoras - chatbots inteligentes, 
+                                                análise preditiva de dados, automação de processos, sistemas de recomendação personalizados e otimização de fluxos de trabalho complexos.
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="s-item">
+                                            <img src="./svg/automation.svg" title="Automação & RPA" alt="Automation" draggable="false">
+                                            <h1>Automação & RPA</h1>
+                                            <span>
+                                                Criação de processos automatizados para eliminar tarefas repetitivas, utilizando tecnologias de Robotic Process Automation (RPA) e 
+                                                scripts personalizados que aumentam a produtividade e reduzem erros operacionais em fluxos de trabalho empresariais.
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="s-item">
+                                            <img src="./svg/automation.svg" title="Web Scraping" alt="Web Scraping" draggable="false">
+                                            <h1>Web Scraping</h1>
+                                            <span>
+                                                Extração e coleta automatizada de dados de websites e APIs, transformando informações públicas em dados estruturados 
+                                                para análise de mercado, monitoramento, pesquisa competitiva e alimentação de sistemas inteligentes.
                                             </span>
                                         </div>
                                     </div>
@@ -211,76 +357,58 @@
                                 <span>Projetos</span>
                             </h1>
                         </div>
-                        <div class="projects">
-                            <!-- Projects Slider container -->
+                        <div class="projects swiper-item">
                             <div class="projects-swiper swiper">
                                 <div class="swiper-wrapper">
-                                    <!-- Slides -->
                                     <div class="swiper-slide">
                                         <a href="https://patacos.com.br/" target="_blank" class="projects-link">
                                             <div class="p-item">
                                                 <img src="./images/patacos-screenshot.png" title="Patacos" alt="Patacos" draggable="false">
                                                 <div class="project-details">
-                                                    <h1>PATACOS</h1>
+                                                    <h1>Patacos</h1>
                                                     <span>
                                                         E-commerce Front/Back-end.
                                                     </span>
                                                     <h3>Visite o site! ➜</h3>
                                                     <div class="project-stacks">
-                                                        <img src="./images/django.png" alt="django">
-                                                        <img src="./images/js.png" alt="JavaScript">
+                                                        <img src="./svg/django.svg" alt="django">
+                                                        <img src="./svg/javascript.svg" alt="JavaScript">
                                                     </div>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="https://murilosav.github.io/savawards-templates/" target="_blank" class="projects-link">
-                                            <div class="p-item">
-                                                <img src="./images/savawards-screenshot.png" title="SavAwards" alt="SavAwards" draggable="false">
-                                                <div class="project-details">
-                                                    <h1>SAVAWARDS</h1>
-                                                    <span>
-                                                        Front-end de site de Rifas online.
-                                                    </span>
-                                                    <h3>Visite o site! ➜</h3>
-                                                    <div class="project-stacks">
-                                                        <img src="./images/js.png" alt="JavaScript">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="https://murilosav.github.io/msebooks-sales-page/" target="_blank" class="projects-link">
+                                        <a href="https://murilosav.github.io/msebooks-salespage/" target="_blank" class="projects-link">
                                             <div class="p-item">
                                                 <img src="./images/msebooks-screenshot.png" title="MSEBOOKS" alt="MSEBOOKS" draggable="false">
                                                 <div class="project-details">
                                                     <h1>MS E-BOOKS</h1>
                                                     <span>
-                                                        Página de vendas de Ebook de emagrecimento.
+                                                        Página de vendas de eBook de emagrecimento.
                                                     </span>
                                                     <h3>Visite o site! ➜</h3>
                                                     <div class="project-stacks">
-                                                        <img src="./images/js.png" alt="JavaScript">
+                                                        <img src="./svg/javascript.svg" alt="JavaScript">
                                                     </div>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="https://youtu.be/qVnrOob_oVc" target="_blank" class="projects-link">
+                                        <a href="https://youtu.be/..." target="_blank" class="projects-link">
                                             <div class="p-item">
                                                 <img src="./images/pixelgiftcraft-screenshot.png" title="PIXELGIFTCRAFT" alt="PIXELGIFTCRAFT" draggable="false">
                                                 <div class="project-details">
-                                                    <h1>PIXELGIFTCRAFT</h1>
+                                                    <h1>PixelGiftCraft</h1>
                                                     <span>
-                                                        Cria uma imagem em blocos de quem enviou o presente, que é enviada diretamente para o Minecraft, e mais alguns outros eventos.
-                                                        <b>(Interatividade com os presentes do TikTok dentro do Minecraft)</b>
+                                                        Transforma presentes recebidos no TikTok em imagens pixelizadas que aparecem dentro do Minecraft, 
+                                                        criando interatividade em tempo real entre sua live e o jogo. 
+                                                        Cada presente enviado pelos espectadores gera eventos e elementos visuais únicos no servidor.
                                                     </span>
                                                     <div class="project-stacks">
-                                                        <img src="./images/python.png" alt="Python">
-                                                        <img src="./images/java.png" alt="Java">
+                                                        <img src="./svg/python.svg" alt="Python">
+                                                        <img src="./svg/java.svg" alt="Java">
                                                     </div>
                                                 </div>
                                             </div>
@@ -335,9 +463,10 @@
         </div>
     </main>
 
+
     <footer>
         <div class="footer-box">
-            <img src="./images/logo-sav.png" alt="Logo">
+            <img src="./images/logo.webp" alt="Logo">
             <span>© 2024 Murilo Souza, Todos os direitos reservados.</span>
         </div>
     </footer>
@@ -345,101 +474,6 @@
     <script src="./js/menu.js"></script>
     <script src="./js/parallax.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        var stacksSwiper = new Swiper('.stacks-swiper', {
-            loop: false,
-            loopFillGroupWithBlank: true,
-            slidesPerView: 1,
-            spaceBetween: 0,
-            slidesPerGroup: 1,
-            navigation: {
-                nextEl: ".stacks-swiper-button-next",
-                prevEl: ".stacks-swiper-button-prev",
-            },
-            breakpoints: {
-                380: {
-                    slidesPerView: 2,
-                    spaceBetween: 7,
-                    slidesPerGroup: 1,
-                },
-                585: {
-                    slidesPerView: 3,
-                    spaceBetween: 7,
-                    slidesPerGroup: 1,
-                },
-                888: {
-                    slidesPerView: 4,
-                    spaceBetween: 7,
-                    slidesPerGroup: 1,
-                },
-                1140: {
-                    slidesPerView: 4,
-                    spaceBetween: 10,
-                    slidesPerGroup: 1,
-                }
-            }
-        });
-
-
-        var servicesSwiper = new Swiper('.services-swiper', {
-            loop: false,
-            loopFillGroupWithBlank: true,
-            slidesPerView: 1,
-            spaceBetween: 0,
-            slidesPerGroup: 1,
-            navigation: {
-                nextEl: ".services-swiper-button-next",
-                prevEl: ".services-swiper-button-prev",
-            },
-            breakpoints: {
-                380: {
-                    slidesPerView: 1,
-                    spaceBetween: 7,
-                    slidesPerGroup: 1,
-                },
-                586: {
-                    slidesPerView: 2,
-                    spaceBetween: 7,
-                    slidesPerGroup: 1,
-                },
-                817: {
-                    slidesPerView: 3,
-                    spaceBetween: 10,
-                    slidesPerGroup: 1,
-                    allowTouchMove: false,
-                    simulateTouch: false, 
-                },
-            }
-        });
-
-        var projectsSwiper = new Swiper('.projects-swiper', {
-            loop: false,
-            loopFillGroupWithBlank: true,
-            slidesPerView: 1,
-            spaceBetween: 0,
-            slidesPerGroup: 1,
-            navigation: {
-                nextEl: ".projects-swiper-button-next",
-                prevEl: ".projects-swiper-button-prev",
-            },
-            breakpoints: {
-                380: {
-                    slidesPerView: 1,
-                    spaceBetween: 7,
-                    slidesPerGroup: 1,
-                },
-                441: {
-                    slidesPerView: 2,
-                    spaceBetween: 7,
-                    slidesPerGroup: 1,
-                },
-                817: {
-                    slidesPerView: 3,
-                    spaceBetween: 10,
-                    slidesPerGroup: 1,
-                },
-            }
-        });
-    </script>
+    <script src="./js/swiper.js"></script>
 </body>
 </html>
