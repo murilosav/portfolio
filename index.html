@@ -49,7 +49,6 @@
     <!-- DNS Prefetch & Preconnect -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -59,7 +58,6 @@
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     
     <!-- Structured Data (JSON-LD) -->
@@ -93,12 +91,14 @@
             <div class="logo">
                 <img src="./images/logo.webp" alt="Logo" draggable="false">
             </div>
-            <nav>
-                <li id="menu-home">Início</li>
-                <li id="menu-about">Sobre</li>
-                <li id="menu-services">Serviços</li>
-                <li id="menu-projects">Projetos</li>
-                <li id="menu-contact">Contato</li>
+            <nav aria-label="Navegação principal">
+                <ul>
+                    <li id="menu-home" tabindex="0" role="button">Início</li>
+                    <li id="menu-about" tabindex="0" role="button">Sobre</li>
+                    <li id="menu-services" tabindex="0" role="button">Serviços</li>
+                    <li id="menu-projects" tabindex="0" role="button">Projetos</li>
+                    <li id="menu-contact" tabindex="0" role="button">Contato</li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -116,7 +116,7 @@
                         </div>
                         
                         <div class="banner-actions">
-                            <a href="https://pay.cakto.com.br/krqwehx_605988" class="banner-cta">
+                            <a href="https://payorbe.com.br/xmiisvb_490591/" class="banner-cta">
                                 Acessar planilha
                                 <span class="banner-icon">→</span>
                             </a>
@@ -131,8 +131,8 @@
                     <div class="accent-line"></div>
                 </div>
             </div>
-            <div style="justify-items: anchor-center;">
-                <div class="main-details" style="position: relative;">
+            <div class="hero-wrapper">
+                <div class="main-details">
                     <img class="absolute-left top-48 w-[320px]" src="./svg/absolute-left-shape.svg" alt="shape" draggable="false">
                     <img class="absolute-right top-48 w-[520px]" src="./svg/absolute-right-shape.svg" alt="shape" draggable="false">
                     <div class="background-blue-filter-blur first-glow" style="width: 810px; height: 100px; top: 230px;"></div>
@@ -179,17 +179,17 @@
                             <span>⌝</span>
                         </span>
                         <div class="description-text">
-                            Sou um desenvolvedor especializado em criar soluções web robustas e interativas, com vasta experiência em Django. 
-                            Minha expertise se concentra no desenvolvimento de e-commerces e plataformas dinâmicas, projetados para oferecer uma experiência de usuário otimizada 
+                            Sou um desenvolvedor especializado em criar soluções web robustas e interativas, com vasta experiência em Django.
+                            Minha expertise se concentra no desenvolvimento de e-commerces e plataformas dinâmicas, projetados para oferecer uma experiência de usuário otimizada
                             e funcionalidades altamente eficientes.
-                            <br></br>
-                            Além disso, possuo um profundo conhecimento no ambiente digital, abrangendo marketing, design, edição de vídeos, animação 4D, 
-                            inteligência artificial, automação de processos, desenvolvimento de plugins para jogos e criptomoedas. 
+                            <br><br>
+                            Além disso, possuo um profundo conhecimento no ambiente digital, abrangendo marketing, design, edição de vídeos, animação 4D,
+                            inteligência artificial, automação de processos, desenvolvimento de plugins para jogos e criptomoedas.
                             Ao longo da minha trajetória, já alcancei milhões de visualizações com vídeos que produzi, o que reflete minha habilidade em gerar engajamento e inovação no digital.
-                            <br></br>
-                            Minha experiência me proporciona uma visão à frente das tendências, possibilitando o desenvolvimento de soluções inovadoras e eficazes. 
+                            <br><br>
+                            Minha experiência me proporciona uma visão à frente das tendências, possibilitando o desenvolvimento de soluções inovadoras e eficazes.
                             Escolher-me para seu projeto é optar por um profissional que combina criatividade, expertise técnica e uma visão estratégica para alcançar o sucesso.
-                            <br></br>
+                            <br><br>
                             <b>"Faça o seu melhor, mas sempre com um olhar para o futuro." - Steve Jobs</b>
                         </div>
                     </div>
@@ -199,98 +199,102 @@
                 <div class="stacks-content">
                     <div class="stacks-box">
                         <h2>Stacks:</h2>
-                        <div class="stacks-swiper swiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
+                        <div class="carousel stacks-carousel">
+                            <div class="carousel-track">
+                                <div class="carousel-slide">
                                     <div class="stacks">
                                         <img src="./svg/python.svg" title="Python" alt="Python" draggable="false">
                                         <h3>Python</h3>
                                     </div>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="carousel-slide">
                                     <div class="stacks">
                                         <img src="./svg/django.svg" title="Django" alt="Django" draggable="false">
                                         <h3>Django</h3>
                                     </div>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="carousel-slide">
                                     <div class="stacks">
                                         <img src="./svg/flask.svg" title="Flask" alt="Flask" draggable="false">
                                         <h3>Flask</h3>
                                     </div>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="carousel-slide">
                                     <div class="stacks">
                                         <img src="./svg/javascript.svg" title="JavaScript" alt="JavaScript" draggable="false">
                                         <h3>JavaScript</h3>
                                     </div>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="carousel-slide">
                                     <div class="stacks">
                                         <img src="./svg/html5.svg" title="HTML5" alt="HTML5" draggable="false">
                                         <h3>HTML5</h3>
                                     </div>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="carousel-slide">
                                     <div class="stacks">
                                         <img src="./svg/css3.svg" title="CSS3" alt="CSS3" draggable="false">
                                         <h3>CSS3</h3>
                                     </div>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="carousel-slide">
                                     <div class="stacks">
                                         <img src="./svg/git.svg" title="Git" alt="Git" draggable="false">
                                         <h3>Git</h3>
                                     </div>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="carousel-slide">
                                     <div class="stacks">
                                         <img src="./svg/postgresql.svg" title="PostgreSQL" alt="PostgreSQL" draggable="false">
                                         <h3>PostgreSQL</h3>
                                     </div>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="carousel-slide">
                                     <div class="stacks">
                                         <img src="./svg/redis.svg" title="Redis" alt="Redis" draggable="false">
                                         <h3>Redis</h3>
                                     </div>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="carousel-slide">
                                     <div class="stacks">
                                         <img src="./svg/docker.svg" title="Docker" alt="Docker" draggable="false">
                                         <h3>Docker</h3>
                                     </div>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="carousel-slide">
                                     <div class="stacks">
                                         <img src="./svg/celery.svg" title="Celery" alt="Celery" draggable="false">
                                         <h3>Celery</h3>
                                     </div>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="carousel-slide">
                                     <div class="stacks">
                                         <img src="./svg/openlitespeed.svg" title="OpenLiteSpeed" alt="OpenLiteSpeed" draggable="false">
                                         <h3>OpenLiteSpeed</h3>
                                     </div>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="carousel-slide">
                                     <div class="stacks">
                                         <img src="./svg/nginx.svg" title="Nginx" alt="Nginx" draggable="false">
                                         <h3>Nginx</h3>
                                     </div>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="carousel-slide">
                                     <div class="stacks">
                                         <img src="./svg/cloudflare.svg" title="Cloudflare" alt="Cloudflare" draggable="false">
                                         <h3>Cloudflare</h3>
                                     </div>
                                 </div>
                             </div>
+                            <div class="carousel-nav">
+                                <button class="carousel-btn carousel-btn-prev" aria-label="Anterior">
+                                    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                                </button>
+                                <button class="carousel-btn carousel-btn-next" aria-label="Próximo">
+                                    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="stacks-swiper-button-prev swiper-button-prev"></div>
-                        <div class="stacks-swiper-button-next swiper-button-next"></div>
                     </div>
                 </div>
             </div>
@@ -307,65 +311,67 @@
                                 <span>Serviços</span>
                             </h1>
                         </div>
-                        <div class="services swiper-item">
-                            <div class="services-swiper swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="s-item">
-                                            <img src="./svg/frontend.svg" title="Front-end" alt="Frontend" draggable="false">
-                                            <h1>Front-end</h1>
-                                            <span>
-                                                Criação da interface visual de websites e aplicativos, tornando-os atrativos, otimizados e responsivos.
-                                            </span>
-                                        </div>
+                        <div class="carousel services-carousel">
+                            <div class="carousel-track">
+                                <div class="carousel-slide">
+                                    <div class="s-item">
+                                        <img src="./svg/frontend.svg" title="Front-end" alt="Frontend" draggable="false">
+                                        <h1>Front-end</h1>
+                                        <span>
+                                            Criação da interface visual de websites e aplicativos, tornando-os atrativos, otimizados e responsivos.
+                                        </span>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <div class="s-item">
-                                            <img src="./svg/backend.svg" title="Back-end" alt="Backend" draggable="false">
-                                            <h1>Back-end</h1>
-                                            <span>
-                                                Desenvolvimento da lógica e infraestrutura que sustentam sistemas, aplicativos e websites, implementando APIs, 
-                                                bancos de dados e servidores, garantindo a segurança e escalabilidade da aplicação.
-                                            </span>
-                                        </div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <div class="s-item">
+                                        <img src="./svg/backend.svg" title="Back-end" alt="Backend" draggable="false">
+                                        <h1>Back-end</h1>
+                                        <span>
+                                            Desenvolvimento da lógica e infraestrutura que sustentam sistemas, aplicativos e websites, implementando APIs,
+                                            bancos de dados e servidores, garantindo a segurança e escalabilidade da aplicação.
+                                        </span>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <div class="s-item">
-                                            <img src="./svg/ai.svg" title="AI" alt="AI" draggable="false">
-                                            <h1>Inteligência Artificial</h1>
-                                            <span>
-                                                Integração de IA em aplicações com ChatGPT, Claude, Gemini e Grok para desenvolver soluções inovadoras - chatbots inteligentes, 
-                                                análise preditiva de dados, automação de processos, sistemas de recomendação personalizados e otimização de fluxos de trabalho complexos.
-                                            </span>
-                                        </div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <div class="s-item">
+                                        <img src="./svg/ai.svg" title="AI" alt="AI" draggable="false">
+                                        <h1>Inteligência Artificial</h1>
+                                        <span>
+                                            Integração de IA em aplicações com ChatGPT, Claude, Gemini e Grok para desenvolver soluções inovadoras - chatbots inteligentes,
+                                            análise preditiva de dados, automação de processos, sistemas de recomendação personalizados e otimização de fluxos de trabalho complexos.
+                                        </span>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <div class="s-item">
-                                            <img src="./svg/automation.svg" title="Automação & RPA" alt="Automation" draggable="false">
-                                            <h1>Automação & RPA</h1>
-                                            <span>
-                                                Criação de processos automatizados para eliminar tarefas repetitivas, utilizando tecnologias de Robotic Process Automation (RPA) e 
-                                                scripts personalizados que aumentam a produtividade e reduzem erros operacionais em fluxos de trabalho empresariais.
-                                            </span>
-                                        </div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <div class="s-item">
+                                        <img src="./svg/automation.svg" title="Automação & RPA" alt="Automation" draggable="false">
+                                        <h1>Automação & RPA</h1>
+                                        <span>
+                                            Criação de processos automatizados para eliminar tarefas repetitivas, utilizando tecnologias de Robotic Process Automation (RPA) e
+                                            scripts personalizados que aumentam a produtividade e reduzem erros operacionais em fluxos de trabalho empresariais.
+                                        </span>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <div class="s-item">
-                                            <img src="./svg/webscraping.svg" title="Web Scraping" alt="Web Scraping" draggable="false">
-                                            <h1>Web Scraping</h1>
-                                            <span>
-                                                Extração e coleta automatizada de dados de websites e APIs, transformando informações públicas em dados estruturados 
-                                                para análise de mercado, monitoramento, pesquisa competitiva e alimentação de sistemas inteligentes.
-                                            </span>
-                                        </div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <div class="s-item">
+                                        <img src="./svg/webscraping.svg" title="Web Scraping" alt="Web Scraping" draggable="false">
+                                        <h1>Web Scraping</h1>
+                                        <span>
+                                            Extração e coleta automatizada de dados de websites e APIs, transformando informações públicas em dados estruturados
+                                            para análise de mercado, monitoramento, pesquisa competitiva e alimentação de sistemas inteligentes.
+                                        </span>
                                     </div>
                                 </div>
                             </div>
+                            <div class="carousel-nav">
+                                <button class="carousel-btn carousel-btn-prev" aria-label="Anterior">
+                                    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                                </button>
+                                <button class="carousel-btn carousel-btn-next" aria-label="Próximo">
+                                    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="services-swiper-button-prev swiper-button-prev"></div>
-                        <div class="services-swiper-button-next swiper-button-next"></div>
                     </div>
                 </div>
             </div>
@@ -382,157 +388,157 @@
                                 <span>Projetos</span>
                             </h1>
                         </div>
-                        <div class="projects swiper-item">
-                            <div class="projects-swiper swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <a href="https://patacos.com.br/" target="_blank" class="projects-link">
-                                            <div class="p-item">
-                                                <img src="./images/patacos-screenshot.png" title="Patacos" alt="Patacos" draggable="false">
-                                                <div class="project-details">
-                                                    <h1>Patacos</h1>
-                                                    <span>
-                                                        E-commerce inovador de roupas com QRCode dinâmico, onde sua roupa é o destino a qualquer URL da internet, podendo ser alterada a todo momento. Recebendo estatísticas em tempo real diretamente do seu celular.
-                                                    </span>
-                                                    <h3>Visite o site! ➜</h3>
-                                                    <div class="project-stacks">
-                                                        <img src="./svg/django.svg" alt="django">
-                                                        <img src="./svg/javascript.svg" alt="JavaScript">
-                                                    </div>
+                        <div class="carousel projects-carousel">
+                            <div class="carousel-track">
+                                <div class="carousel-slide">
+                                    <a href="https://patacos.com.br/" target="_blank" class="projects-link">
+                                        <div class="p-item">
+                                            <img src="./images/patacos-screenshot.png" title="Patacos" alt="Patacos" draggable="false">
+                                            <div class="project-details">
+                                                <h1>Patacos</h1>
+                                                <span>
+                                                    E-commerce inovador de roupas com QRCode dinâmico, onde sua roupa é o destino a qualquer URL da internet, podendo ser alterada a todo momento.
+                                                </span>
+                                                <h3>Visite o site! ➜</h3>
+                                                <div class="project-stacks">
+                                                    <img src="./svg/django.svg" alt="django">
+                                                    <img src="./svg/javascript.svg" alt="JavaScript">
                                                 </div>
                                             </div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="https://apoiate.online/login" target="_blank" class="projects-link">
-                                            <div class="p-item">
-                                                <img src="./images/apoiate-screenshot.png" title="Apoiate" alt="Apoiate" draggable="false">
-                                                <div class="project-details">
-                                                    <h1>Apoiate</h1>
-                                                    <span>
-                                                        Plataforma para Superar Términos com Neurociência. (Quiz de diagnóstico com IA)
-                                                    </span>
-                                                    <h3>Visite o site! ➜</h3>
-                                                    <div class="project-stacks">
-                                                        <img src="./svg/django.svg" alt="django">
-                                                        <img src="./svg/javascript.svg" alt="JavaScript">
-                                                    </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-slide">
+                                    <a href="https://apoiate.online/login" target="_blank" class="projects-link">
+                                        <div class="p-item">
+                                            <img src="./images/apoiate-screenshot.png" title="Apoiate" alt="Apoiate" draggable="false">
+                                            <div class="project-details">
+                                                <h1>Apoiate</h1>
+                                                <span>
+                                                    Plataforma para Superar Términos com Neurociência. (Quiz de diagnóstico com IA)
+                                                </span>
+                                                <h3>Visite o site! ➜</h3>
+                                                <div class="project-stacks">
+                                                    <img src="./svg/django.svg" alt="django">
+                                                    <img src="./svg/javascript.svg" alt="JavaScript">
                                                 </div>
                                             </div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="https://youtu.be/qVnrOob_oVc" target="_blank" class="projects-link">
-                                            <div class="p-item">
-                                                <img src="./images/pixelgiftcraft-screenshot.png" title="PixelGiftCraft" alt="PixelGiftCraft" draggable="false">
-                                                <div class="project-details">
-                                                    <h1>PixelGiftCraft</h1>
-                                                    <span>
-                                                        Transforma presentes recebidos no TikTok em imagens pixelizadas que aparecem dentro do Minecraft, 
-                                                        criando interatividade em tempo real entre sua live e o jogo. 
-                                                        Cada presente enviado pelos espectadores gera eventos e elementos visuais únicos no servidor.
-                                                    </span>
-                                                    <div class="project-stacks">
-                                                        <img src="./svg/python.svg" alt="Python">
-                                                        <img src="./svg/java.svg" alt="Java">
-                                                    </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-slide">
+                                    <a href="https://youtu.be/qVnrOob_oVc" target="_blank" class="projects-link">
+                                        <div class="p-item">
+                                            <img src="./images/pixelgiftcraft-screenshot.png" title="PixelGiftCraft" alt="PixelGiftCraft" draggable="false">
+                                            <div class="project-details">
+                                                <h1>PixelGiftCraft</h1>
+                                                <span>
+                                                    Transforma presentes recebidos no TikTok em imagens pixelizadas que aparecem dentro do Minecraft.
+                                                </span>
+                                                <div class="project-stacks">
+                                                    <img src="./svg/python.svg" alt="Python">
+                                                    <img src="./svg/java.svg" alt="Java">
                                                 </div>
                                             </div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="https://murilosav.github.io/msebooks-salespage/" target="_blank" class="projects-link">
-                                            <div class="p-item">
-                                                <img src="./images/msebooks-screenshot.png" title="MSEBOOKS" alt="MSEBOOKS" draggable="false">
-                                                <div class="project-details">
-                                                    <h1>MS E-BOOKS</h1>
-                                                    <span>
-                                                        Landing page de alta conversão criada para um eBook de emagrecimento.
-                                                    </span>
-                                                    <h3>Visite o site! ➜</h3>
-                                                    <div class="project-stacks">
-                                                        <img src="./svg/javascript.svg" alt="JavaScript">
-                                                    </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-slide">
+                                    <a href="https://murilosav.github.io/msebooks-salespage/" target="_blank" class="projects-link">
+                                        <div class="p-item">
+                                            <img src="./images/msebooks-screenshot.png" title="MSEBOOKS" alt="MSEBOOKS" draggable="false">
+                                            <div class="project-details">
+                                                <h1>MS E-BOOKS</h1>
+                                                <span>
+                                                    Landing page de alta conversão criada para um eBook de emagrecimento.
+                                                </span>
+                                                <h3>Visite o site! ➜</h3>
+                                                <div class="project-stacks">
+                                                    <img src="./svg/javascript.svg" alt="JavaScript">
                                                 </div>
                                             </div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="https://centerbikesfs.com.br" target="_blank" class="projects-link">
-                                            <div class="p-item">
-                                                <img src="./images/centerbike-screenshot.png" title="Center Bike" alt="CenterBike" draggable="false">
-                                                <div class="project-details">
-                                                    <h1>Center Bike</h1>
-                                                    <span>
-                                                        Landing page desenvolvida para a Center Bike, a maior oficina de bicicletas da região, sinônimo de qualidade, confiança e tradição no ciclismo.
-                                                    </span>
-                                                    <h3>Visite o site! ➜</h3>
-                                                    <div class="project-stacks">
-                                                        <img src="./svg/javascript.svg" alt="JavaScript">
-                                                    </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-slide">
+                                    <a href="https://centerbikesfs.com.br" target="_blank" class="projects-link">
+                                        <div class="p-item">
+                                            <img src="./images/centerbike-screenshot.png" title="Center Bike" alt="CenterBike" draggable="false">
+                                            <div class="project-details">
+                                                <h1>Center Bike</h1>
+                                                <span>
+                                                    Landing page desenvolvida para a Center Bike, a maior oficina de bicicletas da região.
+                                                </span>
+                                                <h3>Visite o site! ➜</h3>
+                                                <div class="project-stacks">
+                                                    <img src="./svg/javascript.svg" alt="JavaScript">
                                                 </div>
                                             </div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="https://murilosav.github.io/bunifix-salespage/" target="_blank" class="projects-link">
-                                            <div class="p-item">
-                                                <img src="./images/bunifix-screenshot.png" title="Bunifix" alt="Bunifix" draggable="false">
-                                                <div class="project-details">
-                                                    <h1>Bunifix</h1>
-                                                    <span>
-                                                        Landing page persuasiva criada para um produto de dropshipping que promete aliviar e corrigir joanetes — design focado em conversão e credibilidade.
-                                                    </span>
-                                                    <h3>Visite o site! ➜</h3>
-                                                    <div class="project-stacks">
-                                                        <img src="./svg/javascript.svg" alt="JavaScript">
-                                                    </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-slide">
+                                    <a href="https://murilosav.github.io/bunifix-salespage/" target="_blank" class="projects-link">
+                                        <div class="p-item">
+                                            <img src="./images/bunifix-screenshot.png" title="Bunifix" alt="Bunifix" draggable="false">
+                                            <div class="project-details">
+                                                <h1>Bunifix</h1>
+                                                <span>
+                                                    Landing page persuasiva criada para um produto de dropshipping que promete aliviar e corrigir joanetes.
+                                                </span>
+                                                <h3>Visite o site! ➜</h3>
+                                                <div class="project-stacks">
+                                                    <img src="./svg/javascript.svg" alt="JavaScript">
                                                 </div>
                                             </div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" target="_blank" class="projects-link">
-                                            <div class="p-item">
-                                                <img src="https://placehold.co/600x400" title="CharlesAI" alt="CharlesAI" draggable="false">
-                                                <div class="project-details">
-                                                    <h1>Charles AI</h1>
-                                                    <span>
-                                                        Plataforma inteligente que revela nichos e subnichos lucrativos e guia você passo a passo para criar, lançar e escalar seu produto digital de sucesso.
-                                                    </span>
-                                                    <h3>Visite o site! ➜</h3>
-                                                    <div class="project-stacks">
-                                                        <img src="./svg/django.svg" alt="django">
-                                                        <img src="./svg/javascript.svg" alt="JavaScript">
-                                                    </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-slide">
+                                    <a href="#" target="_blank" class="projects-link">
+                                        <div class="p-item">
+                                            <img src="https://placehold.co/600x400" title="CharlesAI" alt="CharlesAI" draggable="false">
+                                            <div class="project-details">
+                                                <h1>Charles AI</h1>
+                                                <span>
+                                                    Plataforma inteligente que revela nichos e subnichos lucrativos para criar seu produto digital de sucesso.
+                                                </span>
+                                                <h3>Visite o site! ➜</h3>
+                                                <div class="project-stacks">
+                                                    <img src="./svg/django.svg" alt="django">
+                                                    <img src="./svg/javascript.svg" alt="JavaScript">
                                                 </div>
                                             </div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" target="_blank" class="projects-link">
-                                            <div class="p-item">
-                                                <img src="https://placehold.co/600x400" title="MapserLead" alt="MapserLead" draggable="false">
-                                                <div class="project-details">
-                                                    <h1>MapserLead</h1>
-                                                    <span>
-                                                        Encontre e salve potenciais clientes direto do Google Maps de forma automática e inteligente — e deixe o MapserLead conversar com eles até a venda acontecer.
-                                                    </span>
-                                                    <h3>Visite o site! ➜</h3>
-                                                    <div class="project-stacks">
-                                                        <img src="./svg/python.svg" alt="django">
-                                                    </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-slide">
+                                    <a href="#" target="_blank" class="projects-link">
+                                        <div class="p-item">
+                                            <img src="https://placehold.co/600x400" title="MapserLead" alt="MapserLead" draggable="false">
+                                            <div class="project-details">
+                                                <h1>MapserLead</h1>
+                                                <span>
+                                                    Encontre e salve potenciais clientes direto do Google Maps de forma automática e inteligente.
+                                                </span>
+                                                <h3>Visite o site! ➜</h3>
+                                                <div class="project-stacks">
+                                                    <img src="./svg/python.svg" alt="Python">
                                                 </div>
                                             </div>
-                                        </a>
-                                    </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
+                            <div class="carousel-nav">
+                                <button class="carousel-btn carousel-btn-prev" aria-label="Anterior">
+                                    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                                </button>
+                                <button class="carousel-btn carousel-btn-next" aria-label="Próximo">
+                                    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="projects-swiper-button-prev swiper-button-prev"></div>
-                        <div class="projects-swiper-button-next swiper-button-next"></div>
                     </div>
                 </div>
             </div>
@@ -579,13 +585,15 @@
     <footer>
         <div class="footer-box">
             <img src="./images/logo.webp" alt="Logo">
-            <span>© 2024 Murilo Souza, Todos os direitos reservados.</span>
+            <span>© <span id="current-year">2024</span> Murilo Souza, Todos os direitos reservados.</span>
         </div>
     </footer>
     
     <script src="./js/menu.js"></script>
     <script src="./js/parallax.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./js/swiper.js"></script>
+    <script src="./js/carousel.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

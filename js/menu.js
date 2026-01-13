@@ -1,34 +1,26 @@
-document.getElementById("menu-home").addEventListener("click", function() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
+// Helper function to handle both click and keyboard navigation
+function handleNavigation(elementId, targetSelector) {
+    const element = document.getElementById(elementId);
 
-document.getElementById("menu-about").addEventListener("click", function() {
-    window.scrollTo({
-        top: document.querySelector(".about-me-container").offsetTop,
-        behavior: 'smooth'
-    });
-});
+    const navigate = function() {
+        const target = targetSelector ? document.querySelector(targetSelector) : null;
+        window.scrollTo({
+            top: target ? target.offsetTop - 80 : 0,
+            behavior: 'smooth'
+        });
+    };
 
-document.getElementById("menu-services").addEventListener("click", function() {
-    window.scrollTo({
-        top: document.querySelector(".services-container").offsetTop,
-        behavior: 'smooth'
+    element.addEventListener("click", navigate);
+    element.addEventListener("keydown", function(e) {
+        if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            navigate();
+        }
     });
-});
+}
 
-document.getElementById("menu-projects").addEventListener("click", function() {
-    window.scrollTo({
-        top: document.querySelector(".projects-container").offsetTop,
-        behavior: 'smooth'
-    });
-});
-
-document.getElementById("menu-contact").addEventListener("click", function() {
-    window.scrollTo({
-        top: document.querySelector(".contacts-container").offsetTop,
-        behavior: 'smooth'
-    });
-});
+handleNavigation("menu-home", null);
+handleNavigation("menu-about", ".about-me-container");
+handleNavigation("menu-services", ".services-container");
+handleNavigation("menu-projects", ".projects-container");
+handleNavigation("menu-contact", ".contacts-container");
