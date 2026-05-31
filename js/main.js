@@ -49,11 +49,12 @@ if (projects.length) {
     if (reduceMotion || !('IntersectionObserver' in window)) {
         projects.forEach((p) => p.classList.add('peeked'));
     } else {
-        const pio = new IntersectionObserver((entries, obs) => {
+        const pio = new IntersectionObserver((entries) => {
             entries.forEach((e) => {
-                if (e.isIntersecting) { e.target.classList.add('peeked'); obs.unobserve(e.target); }
+                if (e.intersectionRatio >= 0.7) e.target.classList.add('peeked');
+                else if (e.intersectionRatio <= 0.12) e.target.classList.remove('peeked');
             });
-        }, { threshold: 0, rootMargin: '0px 0px -24% 0px' });
+        }, { threshold: [0, 0.12, 0.7, 1] });
         projects.forEach((p) => pio.observe(p));
     }
 }
