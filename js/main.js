@@ -44,6 +44,20 @@ if (reduceMotion || !('IntersectionObserver' in window)) {
     reveals.forEach((el) => io.observe(el));
 }
 
+const projects = document.querySelectorAll('.project');
+if (projects.length) {
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+        projects.forEach((p) => p.classList.add('peeked'));
+    } else {
+        const pio = new IntersectionObserver((entries, obs) => {
+            entries.forEach((e) => {
+                if (e.isIntersecting) { e.target.classList.add('peeked'); obs.unobserve(e.target); }
+            });
+        }, { threshold: 0, rootMargin: '0px 0px -24% 0px' });
+        projects.forEach((p) => pio.observe(p));
+    }
+}
+
 const track = document.querySelector('.stack-track');
 if (track && track.children.length) {
     const setSize = 14;
