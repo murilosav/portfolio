@@ -51,10 +51,9 @@ if (projects.length) {
     } else {
         const pio = new IntersectionObserver((entries) => {
             entries.forEach((e) => {
-                if (e.intersectionRatio >= 0.7) e.target.classList.add('peeked');
-                else if (e.intersectionRatio <= 0.12) e.target.classList.remove('peeked');
+                e.target.classList.toggle('peeked', e.isIntersecting);
             });
-        }, { threshold: [0, 0.12, 0.7, 1] });
+        }, { rootMargin: '0px 0px -83% 0px' });
         projects.forEach((p) => pio.observe(p));
     }
 }
