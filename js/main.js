@@ -60,16 +60,56 @@ if (projects.length) {
 
 const track = document.querySelector('.stack-track');
 if (track && track.children.length) {
-    const setSize = 14;
-    const base = [...track.children].slice(0, setSize).map((n) => n.cloneNode(true));
-    let sets = Math.round(track.children.length / setSize) || 1;
-    let guard = 0;
-    while ((track.scrollWidth < window.innerWidth * 2.2 || sets % 2 === 1) && guard < 16) {
-        base.forEach((n) => track.appendChild(n.cloneNode(true)));
-        sets++;
-        guard++;
-    }
-    track.style.animationDuration = Math.max(20, track.scrollWidth / 2 / 70) + 's';
+    const SPEED = 70; // px/s — kept constant so the strip never speeds up
+    // One unique set of chips is the repeating unit (markup ships two identical sets).
+    const unit = [...track.children]
+        .slice(0, Math.max(1, Math.round(track.children.length / 2)))
+        .map((n) => n.cloneNode(true));
+
+    const layout = () => {
+        // Freeze + reset so width is measured without the running transform and the
+        // animation restarts cleanly (no mid-cycle jump in apparent speed).
+        track.style.animation = 'none';
+        void track.offsetWidth;
+        track.replaceChildren(...unit.map((n) => {
+            const c = n.cloneNode(true);
+            c.removeAttribute('aria-hidden');
+            return c;
+        }));
+        // Repeat the unit until one half is wider than the viewport (so the -50%
+        // loop shows no gap), keeping an even number of sets so both halves match.
+        let guard = 0;
+        while ((track.scrollWidth < window.innerWidth * 2.2 ||
+                (track.children.length / unit.length) % 2 === 1) && guard < 40) {
+            unit.forEach((n) => {
+                const c = n.cloneNode(true);
+                c.setAttribute('aria-hidden', 'true');
+                track.appendChild(c);
+            });
+            guard++;
+        }
+        // Duration derived from the real (post-font, post-layout) width → fixed px/s.
+        const duration = (track.scrollWidth / 2 / SPEED).toFixed(2) + 's';
+        track.style.animation = '';
+        track.style.animationDuration = duration;
+    };
+
+    layout();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(layout);
+    window.addEventListener('load', layout);
+    window.addEventListener('pageshow', (e) => { if (e.persisted) layout(); });
+    let resizeT;
+    let lastWidth = window.innerWidth;
+    const onResize = () => {
+        // Mobile address-bar show/hide fires resize with only a height change —
+        // ignore it, since the marquee only depends on width (avoids re-layout jumps).
+        if (window.innerWidth === lastWidth) return;
+        lastWidth = window.innerWidth;
+        clearTimeout(resizeT);
+        resizeT = setTimeout(layout, 200);
+    };
+    window.addEventListener('resize', onResize);
+    window.addEventListener('orientationchange', onResize);
 }
 
 const slugify = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]/g, '');
