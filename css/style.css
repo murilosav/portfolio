@@ -342,8 +342,9 @@ body.menu-open .mobile-nav li:nth-child(4) { animation-delay: 0.26s; }
 }
 
 @keyframes heroGlow {
-    0% { opacity: 0.7; transform: translateY(0); }
-    100% { opacity: 1; transform: translateY(-14px); }
+    0%   { opacity: 0.6; transform: translate(0, 0) scale(1); }
+    50%  { opacity: 1;   transform: translate(2.5%, -14px) scale(1.06); }
+    100% { opacity: 0.6; transform: translate(-2.5%, 6px) scale(1); }
 }
 
 .hero-inner { position: relative; z-index: 3; max-width: 920px; margin: 0 auto; text-align: center; }
@@ -399,8 +400,21 @@ body.menu-open .mobile-nav li:nth-child(4) { animation-delay: 0.26s; }
     opacity: 0.75;
 }
 
-.shape-left { left: -1vw; top: 16%; width: clamp(120px, 22vw, 330px); }
-.shape-right { right: -1vw; top: 20%; width: clamp(150px, 28vw, 460px); }
+.shape-left { left: -1vw; top: 16%; width: clamp(120px, 22vw, 330px); animation: shapeFloatL 12s ease-in-out infinite; }
+.shape-right { right: -1vw; top: 20%; width: clamp(150px, 28vw, 460px); animation: shapeFloatR 15s ease-in-out infinite; }
+
+/* gentle, continuous life for the hero decorations (uses translate/rotate so
+   the `transform` property stays free for JS scroll parallax) */
+@keyframes shapeFloatL {
+    0%   { translate: 0 0;        rotate: 0deg; }
+    50%  { translate: 12px -22px; rotate: 4deg; }
+    100% { translate: 0 0;        rotate: 0deg; }
+}
+@keyframes shapeFloatR {
+    0%   { translate: 0 0;        rotate: 0deg; }
+    50%  { translate: -16px 20px; rotate: -4deg; }
+    100% { translate: 0 0;        rotate: 0deg; }
+}
 
 /* Hero flow animation (data pipeline, light panel) */
 @property --lit {
@@ -722,6 +736,64 @@ body.menu-open .mobile-nav li:nth-child(4) { animation-delay: 0.26s; }
 
 .project-media.logo-round .project-logo img { border-radius: 16px; }
 
+/* ── Project media slider (swipe + autoplay) ──────── */
+.media-slider {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    touch-action: pan-y;
+    cursor: grab;
+}
+.media-slider:active { cursor: grabbing; }
+.media-slider .slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.55s var(--ease);
+    will-change: transform;
+}
+.media-slider .slides img {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.08);
+    filter: blur(12px) brightness(0.55);
+    transition: filter 0.55s var(--ease), transform 0.7s var(--ease);
+    user-select: none;
+    -webkit-user-drag: none;
+}
+.project-media.is-light .media-slider .slides img { filter: blur(12px); }
+.project:hover .media-slider .slides img { transform: scale(1); filter: blur(0) brightness(1); }
+.project:hover .project-media.is-light .media-slider .slides img { filter: blur(0); }
+
+.slide-dots {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    bottom: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    pointer-events: none;
+}
+.slide-dot {
+    width: 7px;
+    height: 7px;
+    padding: 0;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    pointer-events: auto;
+    background: rgba(255, 255, 255, 0.45);
+    transition: background 0.3s var(--ease), width 0.3s var(--ease);
+}
+.project-media.is-light .slide-dot { background: rgba(10, 10, 11, 0.25); }
+.slide-dot.active { width: 20px; background: var(--green); }
+
 /* S4VCRAFT crown + streamers */
 .s4v { position: relative; }
 
@@ -766,6 +838,7 @@ body.menu-open .mobile-nav li:nth-child(4) { animation-delay: 0.26s; }
 @media (hover: none), (max-width: 900px) {
     .project.peeked .project-media > img,
     .project.peeked .project-media.is-light > img { filter: none; transform: none; }
+    .project.peeked .media-slider .slides img { filter: none; transform: scale(1); }
     .project.peeked .project-media.is-light::after { opacity: 0; }
     .project.peeked .project-logo { opacity: 0; transform: scale(0.9); }
 }
@@ -999,7 +1072,9 @@ footer { border-top: 1px solid var(--border); padding: 70px 0 96px; }
     }
     .reveal { opacity: 1; transform: none; }
     .project-media > img,
-    .project-media.is-light > img { filter: none; transform: none; }
+    .project-media.is-light > img,
+    .media-slider .slides img { filter: none; transform: none; }
+    .media-slider .slides { transition: none; }
     .project-media.is-light::after { opacity: 0; }
     .project-logo { display: none; }
 }

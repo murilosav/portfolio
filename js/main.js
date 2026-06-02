@@ -167,4 +167,96 @@ if (heroFlow && !reduceMotion) {
     updateHeroFlow();
 }
 
+// Subtle scroll parallax on the hero decorations. The CSS float animation drives
+// `translate`/`rotate`, so we keep `transform` for parallax — both compose cleanly.
+const heroShapes = document.querySelectorAll('.hero-shape');
+if (heroShapes.length && !reduceMotion) {
+    let shapeTick = false;
+    const updateShapes = () => {
+        shapeTick = false;
+        const y = window.scrollY;
+        if (y > window.innerHeight) return;
+        heroShapes.forEach((el) => {
+            const dir = el.classList.contains('shape-right') ? 1 : -1;
+            el.style.transform = `translateY(${(y * 0.18 * dir).toFixed(1)}px)`;
+        });
+    };
+    window.addEventListener('scroll', () => {
+        if (!shapeTick) { requestAnimationFrame(updateShapes); shapeTick = true; }
+    }, { passive: true });
+    updateShapes();
+}
+
+// ── Project media sliders: drag/swipe + autoplay every 2s ──
+document.querySelectorAll('.media-slider').forEach((slider) => {
+    const track = slider.querySelector('.slides');
+    const slides = track ? [...track.children] : [];
+    if (!track || slides.length < 2) return;
+
+    const dotsWrap = slider.querySelector('.slide-dots');
+    let index = 0;
+
+    const dots = slides.map((_, i) => {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'slide-dot';
+        dot.setAttribute('aria-label', `Imagem ${i + 1}`);
+        dot.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); go(i); restart(); });
+        if (dotsWrap) dotsWrap.appendChild(dot);
+        return dot;
+    });
+
+    const render = () => {
+        track.style.transform = `translateX(${-index * 100}%)`;
+        dots.forEach((d, i) => d.classList.toggle('active', i === index));
+    };
+    const go = (i) => { index = (i + slides.length) % slides.length; render(); };
+
+    let timer = null;
+    let visible = false;
+    const stop = () => { if (timer) { clearInterval(timer); timer = null; } };
+    const start = () => { if (!reduceMotion && !timer && visible) timer = setInterval(() => go(index + 1), 2000); };
+    const restart = () => { stop(); start(); };
+
+    // Only autoplay while the card is on screen, so it always starts at the first image.
+    if ('IntersectionObserver' in window) {
+        new IntersectionObserver((entries) => {
+            visible = entries[0].isIntersecting;
+            if (visible) start(); else stop();
+        }, { threshold: 0.4 }).observe(slider);
+    } else {
+        visible = true;
+    }
+
+    const width = () => slider.clientWidth || 1;
+    let startX = 0, dx = 0, dragging = false;
+
+    slider.addEventListener('pointerdown', (e) => {
+        dragging = true; startX = e.clientX; dx = 0;
+        track.style.transition = 'none';
+        stop();
+        try { slider.setPointerCapture(e.pointerId); } catch (_) {}
+    });
+    slider.addEventListener('pointermove', (e) => {
+        if (!dragging) return;
+        dx = e.clientX - startX;
+        track.style.transform = `translateX(${(-index * 100 + (dx / width()) * 100).toFixed(2)}%)`;
+    });
+    const release = () => {
+        if (!dragging) return;
+        dragging = false;
+        track.style.transition = '';
+        if (Math.abs(dx) > width() * 0.15) go(dx < 0 ? index + 1 : index - 1);
+        else render();
+        dx = 0;
+        restart();
+    };
+    slider.addEventListener('pointerup', release);
+    slider.addEventListener('pointercancel', release);
+    slider.addEventListener('dragstart', (e) => e.preventDefault());
+
+    render();
+    start();
+});
+
 document.getElementById('current-year').textContent = new Date().getFullYear();
