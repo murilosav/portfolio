@@ -207,26 +207,6 @@ if (heroFlow && !reduceMotion) {
     updateHeroFlow();
 }
 
-// Subtle scroll parallax on the hero decorations. The CSS float animation drives
-// `translate`/`rotate`, so we keep `transform` for parallax — both compose cleanly.
-const heroShapes = document.querySelectorAll('.hero-shape');
-if (heroShapes.length && !reduceMotion) {
-    let shapeTick = false;
-    const updateShapes = () => {
-        shapeTick = false;
-        const y = window.scrollY;
-        if (y > window.innerHeight) return;
-        heroShapes.forEach((el) => {
-            const dir = el.classList.contains('shape-right') ? 1 : -1;
-            el.style.transform = `translateY(${(y * 0.18 * dir).toFixed(1)}px)`;
-        });
-    };
-    window.addEventListener('scroll', () => {
-        if (!shapeTick) { requestAnimationFrame(updateShapes); shapeTick = true; }
-    }, { passive: true });
-    updateShapes();
-}
-
 // ── Project media sliders: drag/swipe + autoplay every 2s ──
 document.querySelectorAll('.media-slider').forEach((slider) => {
     const track = slider.querySelector('.slides');
